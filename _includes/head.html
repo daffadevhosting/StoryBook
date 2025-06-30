@@ -1,0 +1,26 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link href="{{ '/assets/vendor/bootstrap/dist/css/bootstrap.min.css' | relative_url }}" rel="stylesheet" crossorigin="anonymous">
+  <script src="{{ '/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' | relative_url }}" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/lyra-style.css' | relative_url}}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  {% feed_meta %}
+
+  <style>
+    body { background-color: #f2f0ff; font-family: 'Segoe UI', sans-serif; }
+    .chat-box { max-height: 70vh; overflow-y: auto; background: white; border-radius: 12px; padding: 1rem; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .chat-bubble { padding: 10px 15px; border-radius: 20px; max-width: 75%; margin-bottom: 10px; line-height: 1.4; }
+    .from-lyra { background-color: #e0dbff; align-self: flex-start; border-bottom-left-radius: 0; }
+    .from-user { background-color: #cfe5ff; align-self: flex-end; border-bottom-right-radius: 0; }
+    .chat-input { position: sticky; bottom: 0; background: white; padding-top: 1rem; }
+  </style>
+</head>

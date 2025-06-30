@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
+
+  {% include head.html %}
+
+  <body>
+  {% include navbar.html %}
+
+    <main class="container" aria-label="Content">
+      {{ content }}
+    </main>
+    
+    {% include wellcome-modal.html %}
+    {% include modal-premium.html %}
+
+<script src="{{ '/assets/js/firebase-config.js' | relative_url }}" type="module"></script>
+<script src="{{ '/assets/js/app.js' | relative_url }}" type="module"></script>
+<script src="{{ '/assets/js/limitCheck.js' | relative_url }}" type="module"></script>
+<script src="{{ '/assets/js/auth-init.js' | relative_url }}" type="module"></script>
+  </body>
+
+</html>

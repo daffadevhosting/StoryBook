@@ -1,0 +1,55 @@
+---
+layout: default
+permalink: /donasi
+---
+
+<!-- donasi.html -->
+
+<section class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 text-center">
+      <h2 class="fw-bold mb-3">💖 Dukung Lyra</h2>
+      <p class="text-muted mb-4">
+        Dengan berdonasi, kamu membantu Lyra terus berkembang dan bercerita tanpa batas untuk anak-anak Indonesia.
+      </p>
+
+      <div class="card shadow-sm border-0 rounded-4 p-4 mb-4">
+        <h5 class="fw-semibold mb-3">QRIS / E-Wallet</h5>
+        <img src="/assets/img/qris-lyra.png" alt="QRIS Lyra" class="img-fluid rounded mb-3" style="max-width: 300px;">
+        <p class="small text-muted">Scan pakai GoPay, OVO, DANA, atau aplikasi bank favoritmu.</p>
+      </div>
+
+      <div class="alert alert-success rounded-3" id="donasiSuccess" style="display: none;">
+        🎉 Terima kasih telah mendukung Lyra! Akses premium akan segera aktif.
+      </div>
+
+      <button class="btn btn-outline-primary mt-2" onclick="handleConfirmDonasi()">
+        ✅ Saya sudah donasi
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+async function handleConfirmDonasi() {
+  const user = firebase.auth().currentUser;
+  if (!user) return alert("Kamu harus login dulu untuk aktivasi premium.");
+
+  const uid = user.uid;
+  const db = firebase.firestore();
+  const now = new Date();
+  const premiumUntil = new Date(now.setMonth(now.getMonth() + 1)).toISOString();
+
+  try {
+    await db.collection("users").doc(uid).update({
+      isPremium: true,
+      premiumUntil,
+      upgradedAt: new Date().toISOString()
+    });
+    document.getElementById("donasiSuccess").style.display = "block";
+  } catch (err) {
+    alert("Gagal mengaktifkan premium. Coba lagi nanti.");
+    console.error(err);
+  }
+}
+</script>
