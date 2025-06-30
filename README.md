@@ -1,4 +1,4 @@
-# 📘 AI StoryBook Editor
+# 📘 L Y Я A - AI StoryBook Editor
 
 **Proyek ini adalah editor buku cerita interaktif yang menggunakan AI untuk menghasilkan cerita berdasarkan tema dan gaya pilihan pengguna.** Dibuat menggunakan HTML+JS dan terintegrasi dengan model AI gratis `deepseek-r1` via OpenRouter API.
 
@@ -77,7 +77,7 @@ Project ini open-source dan bebas dimodifikasi.
 
 ## 📄 Lisensi
 
-MIT License © 2025 Endang
+MIT License © 2025 nDang
 
 > Powered by DeepSeek R1, dibangun dengan semangat rakyat ngoding mandiri. 🚀
 
