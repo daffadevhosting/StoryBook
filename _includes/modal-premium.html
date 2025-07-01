@@ -1,27 +1,20 @@
-<!-- _includes/modal-premium.html -->
-
-<div class="modal fade" id="premiumModal" tabindex="-1" aria-labelledby="premiumModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 rounded-4 shadow-lg">
-      <div class="modal-header bg-warning bg-gradient text-dark rounded-top-4">
-        <h5 class="modal-title fw-bold" id="premiumModalLabel">Akses Cerita Tanpa Batas ✨</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="mb-3">Kamu telah mencapai batas cerita harian. Dukung Lyra untuk terus menulis cerita dan buka akses tanpa batas!</p>
-
-        <ul class="list-unstyled mb-4">
-          <li>✅ Akses unlimited cerita harian</li>
-          <li>✅ Fitur eksklusif di masa depan</li>
-          <li>✅ Dukung perkembangan Lyra & AI Indonesia</li>
-        </ul>
-
-        <div class="text-center">
-          <button class="btn btn-primary w-100 py-2 fw-bold" onclick="location.href='/donasi'">
-            💖 Dukung Sekarang
-          </button>
-        </div>
-      </div>
+<!-- ✅ Modal Premium (Tailwind Version) -->
+<div id="premiumModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white rounded-3xl shadow-xl max-w-md w-full animate-fade-in-up">
+    <div class="bg-yellow-400 rounded-t-3xl px-6 py-4 text-center">
+      <h2 class="text-xl font-bold text-gray-900">✨ Akses Cerita Tanpa Batas</h2>
+    </div>
+    <div class="px-6 py-5 text-gray-700 space-y-4">
+      <p class="text-sm leading-relaxed">Kamu telah mencapai batas cerita harian. Dukung Lyra untuk terus menulis cerita dan buka akses tanpa batas!</p>
+      <ul class="space-y-1 text-sm">
+        <li>✅ Akses unlimited cerita harian</li>
+        <li>✅ Fitur eksklusif di masa depan</li>
+        <li>✅ Dukung perkembangan Lyra & AI Indonesia</li>
+      </ul>
+      <button onclick="location.href='{{site.baseurl}}/donasi'"
+        class="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 rounded-lg transition">
+        💖 Dukung Sekarang
+      </button>
     </div>
   </div>
 </div>

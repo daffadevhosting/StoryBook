@@ -2,8 +2,8 @@
 
 #port: 1001
 title: AI StoryBook
-description: Jekyll x Bootstrap@5.2 Boilerplate.
-baseurl: "" 
+description: Buat Cerita Ajaib Bersama Lyra.
+baseurl: "/StoryBook/" 
 localurl: "<%= ENV['LOCAL_URL'] %>"
 url: "" 
 

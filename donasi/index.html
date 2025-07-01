@@ -5,51 +5,56 @@ permalink: /donasi
 
 <!-- donasi.html -->
 
-<section class="container py-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6 text-center">
-      <h2 class="fw-bold mb-3">💖 Dukung Lyra</h2>
-      <p class="text-muted mb-4">
-        Dengan berdonasi, kamu membantu Lyra terus berkembang dan bercerita tanpa batas untuk anak-anak Indonesia.
-      </p>
+<section class="max-w-xl mx-auto px-4 py-12">
+  <div class="text-center">
+    <h2 class="text-3xl font-bold text-purple-700 mb-2">💖 Dukung Lyra</h2>
+    <p class="text-gray-600 mb-6 leading-relaxed">
+      Dengan berdonasi, kamu membantu Lyra terus berkembang dan bercerita tanpa batas untuk anak-anak Indonesia.
+    </p>
+  </div>
 
-      <div class="card shadow-sm border-0 rounded-4 p-4 mb-4">
-        <h5 class="fw-semibold mb-3">QRIS / E-Wallet</h5>
-        <img src="/assets/img/qris-lyra.png" alt="QRIS Lyra" class="img-fluid rounded mb-3" style="max-width: 300px;">
-        <p class="small text-muted">Scan pakai GoPay, OVO, DANA, atau aplikasi bank favoritmu.</p>
-      </div>
+  <div class="bg-white rounded-2xl shadow-xl p-6 mb-6 text-center">
+    <h3 class="text-lg font-semibold text-gray-800 mb-3">QRIS / E-Wallet</h3>
+    <img src="/assets/img/qris-lyra.png" alt="QRIS Lyra"
+         class="w-full max-w-xs mx-auto rounded-lg border border-gray-200 shadow-sm mb-3">
+    <p class="text-sm text-gray-500">Scan pakai GoPay, OVO, DANA, atau aplikasi bank favoritmu.</p>
+  </div>
 
-      <div class="alert alert-success rounded-3" id="donasiSuccess" style="display: none;">
-        🎉 Terima kasih telah mendukung Lyra! Akses premium akan segera aktif.
-      </div>
+  <div id="donasiSuccess"
+       class="hidden bg-green-100 text-green-800 text-sm font-medium px-4 py-3 rounded-lg shadow mb-5 text-center">
+    🎉 Terima kasih telah mendukung Lyra! Akses premium akan segera aktif.
+  </div>
 
-      <button class="btn btn-outline-primary mt-2" onclick="handleConfirmDonasi()">
-        ✅ Saya sudah donasi
-      </button>
-    </div>
+  <div class="text-center">
+    <button onclick="handleConfirmDonasi()"
+            class="px-6 py-2 text-white bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold shadow transition">
+      ✅ Saya sudah donasi
+    </button>
   </div>
 </section>
+<script type="module">
+  import { auth, db } from './assets/js/firebase-config.js';
+  import { doc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
-<script>
-async function handleConfirmDonasi() {
-  const user = firebase.auth().currentUser;
-  if (!user) return alert("Kamu harus login dulu untuk aktivasi premium.");
+  window.handleConfirmDonasi = async function () {
+    const user = auth.currentUser;
+    if (!user) return alert("Kamu harus login dulu untuk aktivasi premium.");
 
-  const uid = user.uid;
-  const db = firebase.firestore();
-  const now = new Date();
-  const premiumUntil = new Date(now.setMonth(now.getMonth() + 1)).toISOString();
+    const uid = user.uid;
+    const userRef = doc(db, "users", uid);
+    const now = new Date();
+    const premiumUntil = new Date(now.setMonth(now.getMonth() + 1)).toISOString();
 
-  try {
-    await db.collection("users").doc(uid).update({
-      isPremium: true,
-      premiumUntil,
-      upgradedAt: new Date().toISOString()
-    });
-    document.getElementById("donasiSuccess").style.display = "block";
-  } catch (err) {
-    alert("Gagal mengaktifkan premium. Coba lagi nanti.");
-    console.error(err);
+    try {
+      await updateDoc(userRef, {
+        isPremium: true,
+        premiumUntil,
+        upgradedAt: new Date().toISOString()
+      });
+      document.getElementById("donasiSuccess").classList.remove("hidden");
+    } catch (err) {
+      alert("Gagal mengaktifkan premium. Coba lagi nanti.");
+      console.error(err);
+    }
   }
-}
 </script>
