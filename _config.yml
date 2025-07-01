@@ -3,7 +3,7 @@
 #port: 1001
 title: AI StoryBook
 description: Buat Cerita Ajaib Bersama Lyra.
-baseurl: "/StoryBook/" 
+baseurl: "/StoryBook" 
 localurl: "<%= ENV['LOCAL_URL'] %>"
 url: "" 
 

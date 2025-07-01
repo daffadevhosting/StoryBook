@@ -1,6 +1,7 @@
 // ✅ LYRA STORYBOOK ENGINE - FINAL CLEAN VERSION
 import { auth } from './firebase-config.js';
 import { checkStoryLimit, incrementStoryCount } from './limitCheck.js';
+import { generateIllustration } from './generateImage.js';
 /**
  * Menghapus elemen yang tidak diinginkan dari sesi yang dipulihkan.
  * @param {HTMLElement} parentElement Elemen induk tempat elemen akan dibersihkan.
@@ -180,7 +181,7 @@ async function generateStory() {
   appState.isLoading = true;
   const [nama, tempat, petualangan, genre] = appState.answers;
   const storyPrompt = `Buatkan cerita pendek anak berdasarkan informasi berikut:\n\nNama karakter: ${nama}\nTempat tinggal: ${tempat}\nPetualangan: ${petualangan}\nGenre: ${genre}\n\nCeritakan dalam gaya ${genre} yang imajinatif dan menyenangkan dalam 3 paragraf.`;
-  renderBubble(`Tunggu sebentar, Lyra sedang menulis ceritanya... <div class='spinner ml-2'></div>`, "loading");
+  renderBubble(`Tunggu sebentar, Lyra sedang menulis ceritanya... <div class='spinner animate-pulse ml-2'></div>`, "loading");
 
   try {
     const res = await fetch("https://lyra-backend-proxy.d-adityadwiputraramadhan.workers.dev/chat", {
@@ -189,7 +190,7 @@ async function generateStory() {
       body: JSON.stringify({
         model: "google/gemini-2.0-flash-lite-001",
         messages: [
-          { role: "system", content: "Kamu adalah penulis cerita anak-anak bernama Lyra yang imajinatif dan menyenangkan." },
+          { role: "system", content: "Kamu adalah Lyra, penulis cerita anak-anak yang imajinatif dan menyenangkan." },
           { role: "user", content: storyPrompt }
         ]
       })
@@ -215,6 +216,12 @@ async function generateStory() {
     }
 
     removeLastBubble("loading");
+    const imagePrompt = `${nama} ${petualangan}, gaya ilustrasi buku anak-anak, latar ${tempat}, genre ${genre}`;
+    const imageUrl = await generateIllustration(imagePrompt);
+
+    if (imageUrl) {
+      renderBubble(`<img src="${imageUrl}" alt="Ilustrasi cerita" class="rounded-xl shadow-md my-4 w-full max-w-md">`);
+    }
     renderBubble(formatStory(rawContent));
     appState.lastStoryContent = rawContent;
     renderStoryActions();

@@ -12,20 +12,23 @@ permalink: /
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lyra Storybook — Simpan Cerita</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
-  <body class="bg-purple-50 text-gray-800">
+  <body class="bg-purple-50 text-gray-800 overflow-x-hidden">
     <header class="bg-white shadow-md">
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold text-purple-600">Lyra Storybook</h1>
+        <h1 class="text-xl font-bold text-purple-600 flex items-center">
+          <i class="bi bi-book-half mr-2 text-2xl text-purple-500"></i> Lyra Storybook
+        </h1>
         <nav>
-          <button id="loginBtn"
-            class="bg-purple-600 text-white text-sm px-4 py-1.5 rounded hover:bg-purple-700 transition hidden">
-            Login
-          </button>
-          <a href="#fitur" class="text-sm text-purple-600 hover:underline">Fitur</a>
-          <a href="#koleksi" class="ml-6 text-sm text-purple-600 hover:underline">Koleksi</a>
+          <a href="#fitur" class="text-sm text-purple-600 hover:underline flex items-center inline-flex ml-4">
+            <i class="bi bi-stars mr-1"></i> Fitur
+          </a>
+          <a href="#koleksi" class="ml-6 text-sm text-purple-600 hover:underline flex items-center inline-flex">
+            <i class="bi bi-collection-fill mr-1"></i> Koleksi
+          </a>
         </nav>
       </div>
     </header>
@@ -34,8 +37,12 @@ permalink: /
       <h2 class="text-4xl md:text-5xl font-bold text-purple-700 mb-4">Buat Cerita Ajaib Bersama Lyra</h2>
       <p class="text-gray-600 max-w-2xl mx-auto mb-8">Lyra adalah AI pencerita interaktif yang membawamu menjelajah dunia imajinasi, lengkap dengan ilustrasi dan alur cerita yang kamu tentukan sendiri.</p>
       <div class="flex justify-center gap-4">
-        <a href="{{site.baseurl}}/buat-cerita" class="px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">🌟 Mulai Cerita</a>
-        <a href="{{site.baseurl}}/library" class="px-6 py-3 bg-gray-200 text-purple-700 rounded-full hover:bg-gray-300 transition">📚 Lihat Koleksi</a>
+        <a href="{{site.baseurl}}/buat-cerita" class="px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition flex items-center">
+          <i class="bi bi-sparkle mr-2"></i> Mulai Cerita
+        </a>
+        <a href="{{site.baseurl}}/library" class="px-6 py-3 bg-gray-200 text-purple-700 rounded-full hover:bg-gray-300 transition flex items-center">
+          <i class="bi bi-journal-album mr-2"></i> Lihat Koleksi
+        </a>
       </div>
     </section>
 
@@ -43,20 +50,32 @@ permalink: /
       <div class="container mx-auto px-6">
         <h3 class="text-3xl font-bold text-center text-purple-600 mb-12">Fitur Unggulan Lyra</h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-purple-50 p-6 rounded-xl shadow">
-            <h4 class="font-bold text-lg mb-2">Cerita Interaktif</h4>
+          <div class="bg-purple-50 p-6 rounded-xl shadow feature-card">
+            <div class="flex items-center mb-2">
+              <i class="bi bi-chat-text-fill text-purple-600 text-2xl mr-3"></i>
+              <h4 class="font-bold text-lg">Cerita Interaktif</h4>
+            </div>
             <p>Buat cerita berdasarkan nama, tempat, dan genre yang kamu pilih. AI akan menuliskannya untukmu!</p>
           </div>
-          <div class="bg-purple-50 p-6 rounded-xl shadow">
-            <h4 class="font-bold text-lg mb-2">Ilustrasi Otomatis</h4>
+          <div class="bg-purple-50 p-6 rounded-xl shadow feature-card">
+            <div class="flex items-center mb-2">
+              <i class="bi bi-palette-fill text-purple-600 text-2xl mr-3"></i>
+              <h4 class="font-bold text-lg">Ilustrasi Otomatis</h4>
+            </div>
             <p>Setiap cerita dilengkapi dengan gambar bergaya kartun yang dihasilkan AI secara langsung.</p>
           </div>
-          <div class="bg-purple-50 p-6 rounded-xl shadow">
-            <h4 class="font-bold text-lg mb-2">Simpan & Lanjutkan</h4>
+          <div class="bg-purple-50 p-6 rounded-xl shadow feature-card">
+            <div class="flex items-center mb-2">
+              <i class="bi bi-bookmark-fill text-purple-600 text-2xl mr-3"></i>
+              <h4 class="font-bold text-lg">Simpan & Lanjutkan</h4>
+            </div>
             <p>Kamu bisa menyimpan cerita favorit dan melanjutkannya di lain waktu, hanya untuk pengguna premium.</p>
           </div>
-          <div class="bg-purple-50 p-6 rounded-xl shadow">
-            <h4 class="font-bold text-lg mb-2">Mode Premium</h4>
+          <div class="bg-purple-50 p-6 rounded-xl shadow feature-card">
+            <div class="flex items-center mb-2">
+              <i class="bi bi-gem text-purple-600 text-2xl mr-3"></i>
+              <h4 class="font-bold text-lg">Mode Premium</h4>
+            </div>
             <p>Akses tak terbatas untuk cerita, ilustrasi, dan fitur lanjut — bantu Lyra tumbuh lebih hebat!</p>
           </div>
         </div>
@@ -67,16 +86,25 @@ permalink: /
       <div class="container mx-auto px-6">
         <h3 class="text-3xl font-bold text-center text-purple-700 mb-12">Koleksi Cerita Populer</h3>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-xl shadow">
-            <h4 class="text-lg font-bold mb-2">Petualangan Ujang</h4>
+          <div class="bg-white p-6 rounded-xl shadow collection-card">
+            <div class="flex items-center mb-2">
+              <i class="bi bi-rainbow text-purple-500 text-2xl mr-3"></i>
+              <h4 class="text-lg font-bold">Petualangan Ujang</h4>
+            </div>
             <p class="text-sm text-gray-600">Seorang anak mengejar pelangi yang bisa tertawa — dan menemukan dunia baru di balik hujan.</p>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow">
-            <h4 class="text-lg font-bold mb-2">Daffa di Negeri Raksasa</h4>
+          <div class="bg-white p-6 rounded-xl shadow collection-card">
+            <div class="flex items-center mb-2">
+              <i class="bi bi-person-bounding-box text-purple-500 text-2xl mr-3"></i>
+              <h4 class="text-lg font-bold">Daffa di Negeri Raksasa</h4>
+            </div>
             <p class="text-sm text-gray-600">Daffa terjatuh ke jurang dan bertemu makhluk setinggi gunung yang ternyata penyair sedih.</p>
           </div>
-          <div class="bg-white p-6 rounded-xl shadow">
-            <h4 class="text-lg font-bold mb-2">Rahasia Hutan Warna-Warni</h4>
+          <div class="bg-white p-6 rounded-xl shadow collection-card">
+            <div class="flex items-center mb-2">
+              <i class="bi bi-tree-fill text-purple-500 text-2xl mr-3"></i>
+              <h4 class="text-lg font-bold">Rahasia Hutan Warna-Warni</h4>
+            </div>
             <p class="text-sm text-gray-600">Ketika hutan bicara, hanya Lyra dan kamu yang bisa mendengar kisahnya...</p>
           </div>
         </div>
@@ -84,39 +112,64 @@ permalink: /
     </section>
 
     <footer class="bg-white text-center text-sm py-8 text-gray-500">
-      &copy; 2025 Lyra Storybook. Semua hak cipta dilindungi. Dibuat dengan ❤️ oleh AI + Kamu.
+      <p class="footer-text">&copy; 2025 Lyra Storybook. Semua hak cipta dilindungi. Dibuat dengan ❤️ oleh AI + Kamu.</p>
     </footer>
 
     <script>
       gsap.registerPlugin(ScrollTrigger);
+
       window.addEventListener("DOMContentLoaded", () => {
+        // Animasi Hero Section
         gsap.from("h2", { opacity: 0, y: -50, duration: 0.8, ease: "power2.out" });
         gsap.from("p.text-gray-600", { opacity: 0, y: -20, duration: 0.8, delay: 0.4 });
-        gsap.fromTo("a.px-6", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, delay: 0.6, stagger: 0.2 });
+        gsap.fromTo("a.px-6", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, delay: 0.6, stagger: 0.2, ease: "back.out(1.7)" });
 
-        gsap.from("#fitur .bg-purple-50", {
+        // Animasi Header
+        gsap.from("header", { y: -100, opacity: 0, duration: 0.7, ease: "power3.out" });
+        gsap.from("nav a, nav button", { opacity: 0, x: 20, duration: 0.5, stagger: 0.1, delay: 0.3 });
+
+        // Animasi Fitur Section
+        gsap.from(".feature-card", {
           scrollTrigger: {
             trigger: "#fitur",
-            start: "top 80%",
+            start: "top 75%", // Mulai animasi saat bagian atas trigger mencapai 75% dari viewport
+            toggleActions: "play none none none", // Mainkan hanya sekali saat masuk
           },
           opacity: 0,
           y: 50,
-          duration: 0.6,
+          duration: 0.7,
           stagger: 0.2,
+          ease: "back.out(1.2)",
         });
 
-        gsap.from("#koleksi .bg-white", {
+        // Animasi Koleksi Section
+        gsap.from(".collection-card", {
           scrollTrigger: {
             trigger: "#koleksi",
-            start: "top 80%",
+            start: "top 75%",
+            toggleActions: "play none none none",
           },
           opacity: 0,
           y: 50,
-          duration: 0.6,
+          duration: 0.7,
           stagger: 0.2,
+          ease: "back.out(1.2)",
         });
+
+        // Animasi Footer
+        gsap.from(".footer-text", {
+          scrollTrigger: {
+            trigger: "footer",
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+          opacity: 0,
+          y: 20,
+          duration: 0.6,
+          ease: "power2.out",
+        });
+
       });
     </script>
   </body>
 </html>
-
