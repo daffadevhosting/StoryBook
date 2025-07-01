@@ -95,7 +95,7 @@ storyForm.addEventListener("submit", async (e) => {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            model: "deepseek/deepseek-r1:free",
+            model: "mistralai/mistral-small-3.2-24b-instruct:free",
             messages: [
               { role: "system", content: "Kamu adalah penulis cerita anak-anak bernama Lyra yang imajinatif dan menyenangkan." },
               { role: "user", content: storyPrompt }
@@ -144,4 +144,12 @@ storyForm.addEventListener("submit", async (e) => {
       showPanel(storySection, formSection);
     };
   }, 500);
+});
+
+// ✅ Restore last saved story
+window.addEventListener("DOMContentLoaded", () => {
+  const saved = localStorage.getItem("lyra_last_story");
+  if (saved) {
+    chatBox.innerHTML = saved;
+  }
 });

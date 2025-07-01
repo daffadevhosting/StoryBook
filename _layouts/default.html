@@ -3,18 +3,34 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="bg-purple-50 h-screen overflow-hidden">
   {% include navbar.html %}
-
-    <main class="container" aria-label="Content">
+    <div class="max-w-3xl mx-auto h-full relative">
+      <div class="relative h-full w-full">
       {{ content }}
-    </main>
+      </div>
+    </div>
     
     {% include wellcome-modal.html %}
     {% include modal-premium.html %}
+    <script>
+      const formPanel = document.getElementById("formPanel");
+      const storyPanel = document.getElementById("storyPanel");
 
+      function slideToStory() {
+        gsap.to(formPanel, { x: "-100%", opacity: 0, duration: 0.6, ease: "power2.inOut" });
+        gsap.to(storyPanel, { x: "0%", opacity: 1, duration: 0.6, ease: "power2.inOut", pointerEvents: "auto" });
+      }
+
+      function slideToForm() {
+        gsap.to(storyPanel, { x: "100%", opacity: 0, duration: 0.6, ease: "power2.inOut", onComplete: () => {
+          storyPanel.style.pointerEvents = "none";
+        }});
+        gsap.to(formPanel, { x: "0%", opacity: 1, duration: 0.6, ease: "power2.inOut" });
+      }
+    </script>
 <script src="{{ '/assets/js/firebase-config.js' | relative_url }}" type="module"></script>
-<script src="{{ '/assets/js/app.js' | relative_url }}" type="module"></script>
+<script src="{{ '/assets/js/storyline.js' | relative_url }}" type="module"></script>
 <script src="{{ '/assets/js/limitCheck.js' | relative_url }}" type="module"></script>
 <script src="{{ '/assets/js/auth-init.js' | relative_url }}" type="module"></script>
   </body>

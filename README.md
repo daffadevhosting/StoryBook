@@ -1,6 +1,6 @@
 # 📘 L Y Я A - AI StoryBook Editor
 
-**Proyek ini adalah editor buku cerita interaktif yang menggunakan AI untuk menghasilkan cerita berdasarkan tema dan gaya pilihan pengguna.** Dibuat menggunakan HTML+JS dan terintegrasi dengan model AI gratis `deepseek-r1` via OpenRouter API.
+**Proyek ini adalah editor buku cerita interaktif yang menggunakan AI untuk menghasilkan cerita berdasarkan tema dan gaya pilihan pengguna.** Dibuat menggunakan HTML+JS dan terintegrasi dengan model AI gratis `gemini-2.5` via OpenRouter API.
 
 ---
 
@@ -19,7 +19,7 @@
 
 * [x] Input tema dan judul cerita
 * [x] Dropdown pilihan gaya cerita
-* [x] Integrasi dengan `deepseek-r1:free` dari OpenRouter
+* [x] Integrasi dengan `gemini-2.5` dari OpenRouter
 * [x] Render hasil cerita per paragraf sebagai halaman
 * [x] Ilustrasi dummy per halaman (via `placekitten`)
 
@@ -42,7 +42,7 @@
 
 * HTML5 + Bootstrap 5
 * JavaScript vanilla
-* OpenRouter API (DeepSeek R1)
+* OpenRouter API (Gemini-2.5)
 * Compatible dengan Jekyll static hosting
 
 ---
@@ -79,5 +79,5 @@ Project ini open-source dan bebas dimodifikasi.
 
 MIT License © 2025 nDang
 
-> Powered by DeepSeek R1, dibangun dengan semangat rakyat ngoding mandiri. 🚀
+> Powered by Google/gemini-2.5, dibangun dengan semangat rakyat ngoding mandiri. 🚀
 
