@@ -15,44 +15,40 @@ onAuthStateChanged(auth, async (user) => {
   const loginBtn = document.getElementById("loginBtn");
   const userStatus = document.getElementById("userStatus");
 
-  if (!user) {
+  if (user) {
+    const { uid, displayName, email, photoURL } = user;
+    const docRef = doc(db, "users", uid);
+    let userSnap = await getDoc(docRef);
+
+    // 🔐 Buat akun baru jika belum ada
+    if (!userSnap.exists()) {
+      await setDoc(docRef, {
+        displayName,
+        email,
+        photoURL,
+        createdAt: new Date().toISOString(),
+        isPremium: false,
+        storyCountToday: 0,
+        lastStoryDate: ""
+      });
+      userSnap = await getDoc(docRef); // 🔁 Ambil ulang setelah dibuat
+    }
+
+    // 🔑 Ambil status tier
+    const data = userSnap.data();
+    const tier = data.isPremium ? "Premium" : "Gratisan";
+
+    localStorage.setItem("lyra_user_tier", tier);
+    localStorage.setItem("lyra_logged_in", "true");
+
+    // UI update
+    if (loginBtn) loginBtn.style.display = "none";
+    if (userStatus) userStatus.innerHTML = `<img src="${photoURL}" class="rounded-full w-6 inline me-2" /> ${displayName} | ${tier}`;
+  } else {
+    // Belum login
     if (loginBtn) loginBtn.style.display = "block";
     if (userStatus) userStatus.innerHTML = "<em>Belum login</em>";
     localStorage.removeItem("lyra_user_tier");
-    localStorage.removeItem("lyra_logged_in");
-    return;
+    localStorage.setItem("lyra_logged_in", "false");
   }
-
-  const { uid, displayName, email, photoURL } = user;
-  const userRef = doc(db, "users", uid);
-  const userSnap = await getDoc(userRef);
-
-  if (!userSnap.exists()) {
-    await setDoc(userRef, {
-      displayName,
-      email,
-      photoURL,
-      createdAt: new Date().toISOString(),
-      isPremium: false,
-      storyCountToday: 0,
-      lastStoryDate: "",
-      tier: "gratis"
-    });
-  }
-
-  // Ambil data dari userRef yang udah pasti ada
-  const finalSnap = await getDoc(userRef);
-  const data = finalSnap.data();
-  const tier = data.isPremium ? "Premium" : (data.tier || "Gratisan");
-
-  // Update UI
-  if (loginBtn) loginBtn.style.display = "none";
-  if (userStatus) userStatus.innerHTML = `
-    <img src="${photoURL}" class="rounded-circle me-2" width="32" />
-    ${displayName} | <span class="text-sm">${tier}</span>
-  `;
-
-  // Simpan ke localStorage
-  localStorage.setItem("lyra_user_tier", data.tier || "gratis");
-  localStorage.setItem("lyra_logged_in", "true");
 });

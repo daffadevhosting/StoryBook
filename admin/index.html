@@ -1,0 +1,63 @@
+---
+layout: default
+title: Admin Panel
+permalink: /admin_panel
+---
+
+<div class="p-6 max-w-3xl mx-auto">
+  <h2 class="text-2xl font-bold mb-4">🛠️ Admin Panel: Kelola User</h2>
+  <div id="userTable" class="space-y-4"></div>
+</div>
+<script type="module">
+import { db, auth } from './assets/js/firebase-config.js';
+import { onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
+import { getDocs, getDoc, collection, doc, updateDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+
+async function fetchUsers() {
+  const snapshot = await getDocs(collection(db, "users"));
+  const table = document.getElementById("userTable");
+  table.innerHTML = "";
+
+  snapshot.forEach(docSnap => {
+    const data = docSnap.data();
+    const row = document.createElement("div");
+    row.className = "flex justify-between items-center bg-white shadow p-4 rounded";
+    row.innerHTML = `
+      <div>
+        <p class="font-semibold">${data.displayName || "Tanpa Nama"}</p>
+        <p class="text-sm text-gray-500">${data.email || "-"}</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-sm ${data.isPremium ? 'text-green-600' : 'text-gray-400'}">${data.isPremium ? 'Premium' : 'Gratis'}</span>
+        <button class="text-xs px-3 py-1 rounded bg-blue-100 hover:bg-blue-200" data-uid="${docSnap.id}" data-status="${data.isPremium}">
+          Toggle
+        </button>
+      </div>
+    `;
+    table.appendChild(row);
+  });
+
+  addToggleListeners();
+}
+
+function addToggleListeners() {
+  document.querySelectorAll("button[data-uid]").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const uid = btn.dataset.uid;
+      const current = btn.dataset.status === "true";
+      await updateDoc(doc(db, "users", uid), { isPremium: !current });
+      fetchUsers();
+    });
+  });
+}
+
+// Auth check
+onAuthStateChanged(auth, async user => {
+  if (!user) return alert("Kamu harus login sebagai admin.");
+  const userSnap = await getDoc(doc(db, "users", user.uid));
+  if (!userSnap.exists() || !userSnap.data().isAdmin) {
+    return alert("Akses ditolak. Kamu bukan admin.");
+  }
+  fetchUsers();
+});
+</script>
