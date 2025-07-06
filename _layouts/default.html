@@ -1,39 +1,73 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
-
-  {% include head.html %}
-
-  <body class="bg-purple-50 h-screen overflow-hidden">
-  {% include navbar.html %}
-    <div class="max-w-4xl overflow-y-auto mx-auto h-full relative">
-      <div class="relative h-full w-full">
-      {{ content }}
-      </div>
-    </div>
-    
-    {% include wellcome-modal.html %}
-    {% include modal-premium.html %}
-    {% include modal-simpanCerita.html %}
+<html lang="id-ID">
+    {% include head.html %}
+<body class="min-h-screen">
+    {% include akses-btn.html %}
+    {% include header.html %}
+    {% include mobile-menu.html %}
     <script>
-      const formPanel = document.getElementById("formPanel");
-      const storyPanel = document.getElementById("storyPanel");
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
 
-      function slideToStory() {
-        gsap.to(formPanel, { x: "-100%", opacity: 0, duration: 0.6, ease: "power2.inOut" });
-        gsap.to(storyPanel, { x: "0%", opacity: 1, duration: 0.6, ease: "power2.inOut", pointerEvents: "auto" });
-      }
+        // Accessibility functions
+        function increaseFontSize() {
+            const body = document.body;
+            const currentSize = window.getComputedStyle(body, null).getPropertyValue('font-size');
+            const newSize = parseFloat(currentSize) * 1.2;
+            body.style.fontSize = newSize + 'px';
+        }
 
-      function slideToForm() {
-        gsap.to(storyPanel, { x: "100%", opacity: 0, duration: 0.6, ease: "power2.inOut", onComplete: () => {
-          storyPanel.style.pointerEvents = "none";
-        }});
-        gsap.to(formPanel, { x: "0%", opacity: 1, duration: 0.6, ease: "power2.inOut" });
-      }
+        function decreaseFontSize() {
+            const body = document.body;
+            const currentSize = window.getComputedStyle(body, null).getPropertyValue('font-size');
+            const newSize = parseFloat(currentSize) * 0.8;
+            body.style.fontSize = newSize + 'px';
+        }
+
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+            if (document.body.classList.contains('high-contrast')) {
+                document.body.style.backgroundColor = '#000';
+                document.body.style.color = '#fff';
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.backgroundColor = '#000';
+                    section.style.color = '#fff';
+                });
+            } else {
+                document.body.style.backgroundColor = '';
+                document.body.style.color = '';
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.backgroundColor = '';
+                    section.style.color = '';
+                });
+            }
+        }
+
+        // Book reader functionality
+        document.querySelectorAll('.book-card a').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const bookTitle = this.closest('.book-card').querySelector('h3').textContent;
+                document.getElementById('book-title').textContent = bookTitle;
+                document.getElementById('book-reader').classList.remove('hidden');
+                document.body.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
-<script src="{{ '/assets/js/firebase-config.js' | relative_url }}" type="module"></script>
-<script src="{{ '/assets/js/storyline.js' | relative_url }}" type="module"></script>
-<script src="{{ '/assets/js/limitCheck.js' | relative_url }}" type="module"></script>
-<script src="{{ '/assets/js/auth-init.js' | relative_url }}" type="module"></script>
-  </body>
-
+    {{ content }}
+    {% include footer.html %}
+</body>
 </html>

@@ -1,0 +1,98 @@
+    <!-- Book Reading Page -->
+    <section id="book-reader" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <button id="close-reader" class="text-purple-700 hover:text-purple-900 text-lg">
+                    <i class="fas fa-arrow-left mr-2"></i> Kembali ke Cerita
+                </button>
+                <h2 class="title-font text-2xl text-purple-800" id="book-title">Book Title</h2>
+                <div></div>
+            </div>
+            
+            <div class="book-container">
+                <div class="book">
+                    <div class="page" id="page-1">
+                        <div class="page-content">
+                            <h3 class="title-font text-2xl mb-4">Bab 1</h3>
+                            <p>Ini adalah isi halaman 1. Cerita dimulai di sini...</p>
+                        </div>
+                        <div class="page-nav">
+                            <button class="text-gray-500 cursor-default" disabled>
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </button>
+                            <button class="next-btn text-purple-700 hover:text-purple-900">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="page-number">Page 1</div>
+                    </div>
+                    
+                    <div class="page" id="page-2">
+                        <div class="page-content">
+                            <h3 class="title-font text-2xl mb-4">Bab 1 (lanjutan)</h3>
+                            <p>Ini adalah isi halaman 2. Cerita berlanjut di sini...</p>
+                        </div>
+                        <div class="page-nav">
+                            <button class="prev-btn text-purple-700 hover:text-purple-900">
+                                <i class="fas fa-chevron-left"></i> Previous
+                            </button>
+                            <button class="next-btn text-purple-700 hover:text-purple-900">
+                                Next <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="page-number">Page 1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.getElementById('close-reader').addEventListener('click', function() {
+            document.getElementById('book-reader').classList.add('hidden');
+        });
+
+                // Page turning animation with GSAP
+        let currentPage = 1;
+        const totalPages = 2; // Update this with actual page count
+
+        document.querySelectorAll('.next-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (currentPage >= totalPages) return;
+                
+                const currentPageEl = document.getElementById(`page-${currentPage}`);
+                const nextPageEl = document.getElementById(`page-${currentPage + 1}`);
+                
+                gsap.to(currentPageEl, {
+                    duration: 1,
+                    rotationY: -180,
+                    ease: "power2.inOut",
+                    onComplete: () => {
+                        currentPageEl.style.zIndex = 0;
+                        nextPageEl.style.zIndex = 1;
+                    }
+                });
+                
+                currentPage++;
+            });
+        });
+
+        document.querySelectorAll('.prev-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (currentPage <= 1) return;
+                
+                const currentPageEl = document.getElementById(`page-${currentPage}`);
+                const prevPageEl = document.getElementById(`page-${currentPage - 1}`);
+                
+                prevPageEl.style.zIndex = 2;
+                currentPageEl.style.zIndex = 1;
+                
+                gsap.to(prevPageEl, {
+                    duration: 1,
+                    rotationY: 0,
+                    ease: "power2.inOut"
+                });
+                
+                currentPage--;
+            });
+        });
+    </script>

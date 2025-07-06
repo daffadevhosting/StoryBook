@@ -1,9 +1,9 @@
 # Welcome to Jekyll!
 
-#port: 1001
+port: 8800
 title: AI StoryBook
 description: Buat Cerita Ajaib Bersama Lyra.
-baseurl: "/StoryBook" 
+baseurl: "" 
 localurl: "<%= ENV['LOCAL_URL'] %>"
 url: "" 
 

@@ -1,0 +1,175 @@
+---
+layout: default
+title: Lyra Storybook
+permalink: /buat-cerita
+---
+
+<div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-pink-50 to-purple-100" x-data="storybookAI()" x-init="init()">
+
+  <!-- Form Input -->
+  <div x-ref="formPage" class="absolute inset-0 flex flex-col justify-center items-center p-6 transition-all z-10">
+    <div class="bg-white shadow-2xl rounded-2xl p-8 max-w-xl w-full">
+      <h1 class="text-3xl font-bold text-pink-700 mb-4">📚 Lyra Storybook</h1>
+      <p class="text-gray-500 mb-4">Masukkan tema cerita, dan biarkan AI menciptakan kisah ajaib untuk anak-anak ✨</p>
+
+      <input type="text" x-model="tema" class="w-full border-2 border-pink-300 p-3 rounded-lg focus:ring-2 focus:ring-pink-500 mb-4" placeholder="Contoh: Petualangan anak di hutan ajaib" />
+
+      <button @click="buatCerita" :disabled="loading" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full shadow-lg transition w-full">
+        <span x-show="!loading">✨ Buat Cerita</span>
+        <span x-show="loading">⏳ Memproses...</span>
+      </button>
+
+      <template x-if="sudahBuat && !user">
+        <div class="text-center mt-4">
+          <p class="text-gray-600">Ingin membuat cerita lagi?</p>
+          <button @click="loginGoogle" class="bg-red-500 text-white px-4 py-2 rounded mt-2">🔐 Login dengan Google</button>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- Halaman Hasil Cerita -->
+  <div x-ref="resultPage" class="absolute inset-0 p-6 opacity-0 pointer-events-none transition-all z-0">
+    <div class="bg-white shadow-xl rounded-2xl p-6 max-w-2xl mx-auto h-full flex flex-col">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl font-bold text-pink-700">📖 Cerita Kamu</h2>
+        <button @click="backToForm" class="text-sm text-pink-500 hover:underline">🔙 Kembali</button>
+      </div>
+      <div class="overflow-y-auto text-gray-800 whitespace-pre-wrap leading-relaxed text-lg" x-text="hasil"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Alpine.js + GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+
+<script>
+function storybookAI() {
+  return {
+    tema: '',
+    hasil: '',
+    loading: false,
+    user: null,
+    sudahBuat: false,
+
+    init() {
+      this.sudahBuat = localStorage.getItem("sudahBuatCerita") === "1";
+      this.user = window.authFns?.getCurrentUser?.() || null;
+
+      this.$refs.resultPage.style.opacity = 0;
+      this.$refs.resultPage.style.pointerEvents = 'none';
+
+      const uid = localStorage.getItem("anonUID");
+      if (this.sudahBuat && !this.user && uid) {
+        fetch(`https://wondertales.mvstream.workers.dev/cerita-anon?uid=${uid}`)
+          .then((res) => res.json())
+          .then((data) => {
+            this.tema = data.tema;
+            this.hasil = data.cerita;
+            this.slideToResult();
+          })
+          .catch(() => {
+            this.hasil = "❌ Gagal memuat cerita yang tersimpan.";
+          });
+      }
+    },
+
+    async buatCerita() {
+      if (!this.tema.trim()) {
+        this.hasil = "⚠️ Masukkan tema cerita terlebih dahulu.";
+        return;
+      }
+
+      if (!this.user && this.sudahBuat) {
+        this.hasil = "🔐 Silakan login untuk membuat cerita lagi.";
+        return;
+      }
+
+      this.loading = true;
+      this.hasil = '⏳ Meminta cerita dari AI...';
+      await this.slideToResult();
+
+      const prompt = `Buatkan cerita anak-anak yang imajinatif dan positif berdasarkan tema berikut: "${this.tema}". Gunakan bahasa indonesia yang baik dan sederhana, cocok untuk anak usia 6–10 tahun, dan akhiri dengan pesan moral.`;
+
+      try {
+        const response = await fetch('https://wondertales.mvstream.workers.dev/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt })
+        });
+
+        const data = await response.json();
+        this.hasil = data.reply || "❌ Gagal mendapatkan cerita.";
+
+        if (!this.user) {
+          this.sudahBuat = true;
+          localStorage.setItem("sudahBuatCerita", "1");
+
+          const uid = `anon-${Date.now()}`;
+          localStorage.setItem("anonUID", uid);
+          await fetch("https://wondertales.mvstream.workers.dev/simpan-cerita-anon", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              uid,
+              tema: this.tema,
+              cerita: this.hasil,
+              created_at: new Date().toISOString()
+            })
+          });
+        }
+
+      } catch (err) {
+        this.hasil = "Terjadi kesalahan: " + err.message;
+      }
+
+      this.loading = false;
+    },
+
+    async slideToResult() {
+      const form = this.$refs.formPage;
+      const result = this.$refs.resultPage;
+
+      gsap.to(form, {
+        x: '-100%',
+        duration: 0.8,
+        ease: "power2.inOut",
+        onComplete: () => form.style.display = "none"
+      });
+
+      result.style.display = "block";
+      gsap.set(result, { x: '100%', opacity: 1, pointerEvents: 'auto' });
+      gsap.to(result, { x: '0%', duration: 0.8, ease: "power2.inOut" });
+    },
+
+    async backToForm() {
+      const form = this.$refs.formPage;
+      const result = this.$refs.resultPage;
+
+      gsap.to(result, {
+        x: '100%',
+        duration: 0.8,
+        ease: "power2.inOut",
+        onComplete: () => {
+          result.style.opacity = 0;
+          result.style.pointerEvents = 'none';
+        }
+      });
+
+      form.style.display = "block";
+      gsap.set(form, { x: '-100%' });
+      gsap.to(form, { x: '0%', duration: 0.8, ease: "power2.inOut" });
+    },
+
+    loginGoogle() {
+      window.authFns?.loginGoogle().then((result) => {
+        this.user = result.user;
+        this.sudahBuat = false;
+        localStorage.removeItem("sudahBuatCerita");
+        localStorage.removeItem("anonUID");
+      });
+    }
+  };
+}
+</script>

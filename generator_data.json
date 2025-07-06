@@ -1,0 +1,856 @@
+[
+  {
+    "id": "cute-creature-generator",
+    "title": "Cute Creature Generator",
+    "href": "/machine-learning-model/cute-creature-generator",
+    "image": "https://images.deepai.org/machine-learning-models/50c039053c6941528c5522e8db312af4/cute-creature-generator-thumb.jpg",
+    "alt": "Cute Creature Generator"
+  },
+  {
+    "id": "fantasy-world-generator",
+    "title": "Fantasy World Generator",
+    "href": "/machine-learning-model/fantasy-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/b529aefa83d842f080c0149cab9ed496/fantasy-world-generator-thumb.jpg",
+    "alt": "Fantasy World Generator"
+  },
+  {
+    "id": "cyberpunk-generator",
+    "title": "Cyberpunk Generator",
+    "href": "/machine-learning-model/cyberpunk-generator",
+    "image": "https://images.deepai.org/machine-learning-models/ab8cfbb6e29f41ad9316302a079ff715/cyberpunk-generator-thumb.jpg",
+    "alt": "Cyberpunk Generator"
+  },
+  {
+    "id": "anime-portrait-generator",
+    "title": "Anime Portrait Generator",
+    "href": "/machine-learning-model/anime-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/1497856e7828430aa26fdaf073a08c92/anime-portrait-generator-thumb.jpg",
+    "alt": "Anime Portrait Generator"
+  },
+  {
+    "id": "old-style-generator",
+    "title": "Old Drawing Generator",
+    "href": "/machine-learning-model/old-style-generator",
+    "image": "https://images.deepai.org/machine-learning-models/643d4c46e20b4127809487e9c579f24a/old-style-generator-thumb.jpg",
+    "alt": "Old Drawing Generator"
+  },
+  {
+    "id": "renaissance-painting-generator",
+    "title": "Renaissance Painting Generator",
+    "href": "/machine-learning-model/renaissance-painting-generator",
+    "image": "https://images.deepai.org/machine-learning-models/57f28234f6f64c4daad7d8423d62375b/renaissance-painting-generator-thumb.jpg",
+    "alt": "Renaissance Painting Generator"
+  },
+  {
+    "id": "abstract-painting-generator",
+    "title": "Abstract Painting Generator",
+    "href": "/machine-learning-model/abstract-painting-generator",
+    "image": "https://images.deepai.org/machine-learning-models/082098c77a344039b477755198e5d385/abstract-painting-generator-thumb.jpg",
+    "alt": "Abstract Painting Generator"
+  },
+  {
+    "id": "impressionism-painting-generator",
+    "title": "Impressionism Painting Generator",
+    "href": "/machine-learning-model/impressionism-painting-generator",
+    "image": "https://images.deepai.org/machine-learning-models/c11ac1c8938246f58e9f5dc823d3bb35/impressionism-painting-generator-thumb.jpg",
+    "alt": "Impressionism Painting Generator"
+  },
+  {
+    "id": "surreal-graphics-generator",
+    "title": "Surreal Graphics Generator",
+    "href": "/machine-learning-model/surreal-graphics-generator",
+    "image": "https://images.deepai.org/machine-learning-models/e74ae217a4e24f3280d022eca6dd9938/surreal-graphics-generator-thumb.jpg",
+    "alt": "Surreal Graphics Generator"
+  },
+  {
+    "id": "3d-objects-generator",
+    "title": "3d Objects Generator",
+    "href": "/machine-learning-model/3d-objects-generator",
+    "image": "https://images.deepai.org/machine-learning-models/41915cbcdca94bf68ed9d625e9bdb00a/3d-objects-generator-thumb.jpg",
+    "alt": "3d Objects Generator"
+  },
+  {
+    "id": "origami-3d-generator",
+    "title": "3D Origami Generator",
+    "href": "/machine-learning-model/origami-3d-generator",
+    "image": "https://images.deepai.org/machine-learning-models/0c15beef21ec4375a4656165b760c50a/origami-3d-generator-thumb.jpg",
+    "alt": "3D Origami Generator"
+  },
+  {
+    "id": "hologram-3d-generator",
+    "title": "3D Hologram Generator",
+    "href": "/machine-learning-model/hologram-3d-generator",
+    "image": "https://images.deepai.org/machine-learning-models/9d68cdc5af8c455bb481d01bb173d47e/hologram-3d-generator-thumb.jpg",
+    "alt": "3D Hologram Generator"
+  },
+  {
+    "id": "3d-character-generator",
+    "title": "3D Character Generator",
+    "href": "/machine-learning-model/3d-character-generator",
+    "image": "https://images.deepai.org/machine-learning-models/aff745e05aea4aa299347786ebd48cfd/3d-character-generator-thumb.jpg",
+    "alt": "3D Character Generator"
+  },
+  {
+    "id": "watercolor-painting-generator",
+    "title": "Watercolor Painting Generator",
+    "href": "/machine-learning-model/watercolor-painting-generator",
+    "image": "https://images.deepai.org/machine-learning-models/cbc35e18bb144b8594b39ec55e64df68/watercolor-painting-generator-thumb.jpg",
+    "alt": "Watercolor Painting Generator"
+  },
+  {
+    "id": "pop-art-generator",
+    "title": "Pop Art Generator",
+    "href": "/machine-learning-model/pop-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/258cafa1a6ca4cc583c8f1041087658a/pop-art-generator-thumb.jpg",
+    "alt": "Pop Art Generator"
+  },
+  {
+    "id": "contemporary-architecture-generator",
+    "title": "Contemporary Architecture Generator",
+    "href": "/machine-learning-model/contemporary-architecture-generator",
+    "image": "https://images.deepai.org/machine-learning-models/548a9f67311c487695f3b496eac97365/contemporary-architecture-generator-thu.jpg",
+    "alt": "Contemporary Architecture Generator"
+  },
+  {
+    "id": "future-architecture-generator",
+    "title": "Future Architecture Generator",
+    "href": "/machine-learning-model/future-architecture-generator",
+    "image": "https://images.deepai.org/machine-learning-models/32b5be1078434aa2a0eae87a91b44e24/future-architecture-generator-thumb.jpg",
+    "alt": "Future Architecture Generator"
+  },
+  {
+    "id": "watercolor-architecture-generator",
+    "title": "Watercolor Architecture Generator",
+    "href": "/machine-learning-model/watercolor-architecture-generator",
+    "image": "https://images.deepai.org/machine-learning-models/340aac5e3f0c47eb9359689afe0be405/watercolor-architecture-generator-thumb.jpg",
+    "alt": "Watercolor Architecture Generator"
+  },
+  {
+    "id": "fantasy-character-generator",
+    "title": "Fantasy Character Generator",
+    "href": "/machine-learning-model/fantasy-character-generator",
+    "image": "https://images.deepai.org/machine-learning-models/25e358516e5a4cdb9b28bb25a7ef0d4e/fantasy-character-generator-thumb.jpg",
+    "alt": "Fantasy Character Generator"
+  },
+  {
+    "id": "steampunk-generator",
+    "title": "Steampunk Generator",
+    "href": "/machine-learning-model/steampunk-generator",
+    "image": "https://images.deepai.org/machine-learning-models/4ed7638091e141248e8ac99c95927195/steampunk-generator-thumb.jpg",
+    "alt": "Steampunk Generator"
+  },
+  {
+    "id": "logo-generator",
+    "title": "AI Logo Generator",
+    "href": "/machine-learning-model/logo-generator",
+    "image": "https://images.deepai.org/machine-learning-models/84599fd9b237457c9e3b00c11a78a496/logo-generator-thumb.jpg",
+    "alt": "AI Logo Generator"
+  },
+  {
+    "id": "pixel-art-generator",
+    "title": "Pixel Art Generator",
+    "href": "/machine-learning-model/pixel-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/43e3b9b3bce64245964cc31f760f4abe/pixel-art-generator-thumb.jpg",
+    "alt": "Pixel Art Generator"
+  },
+  {
+    "id": "street-art-generator",
+    "title": "Street Art Generator",
+    "href": "/machine-learning-model/street-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/c3f04bc10d1f475cadc92fcb769d888b/street-art-generator-thumb.jpg",
+    "alt": "Street Art Generator"
+  },
+  {
+    "id": "surreal-portrait-generator",
+    "title": "Surreal Portrait Generator",
+    "href": "/machine-learning-model/surreal-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/7f34ab5f07c54ad396007f07b1ae8bda/surreal-portrait-generator-thumb.jpg",
+    "alt": "Surreal Portrait Generator"
+  },
+  {
+    "id": "anime-world-generator",
+    "title": "Anime World Generator",
+    "href": "/machine-learning-model/anime-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/c8aa2f7674aa4893a7587fd5dc1294eb/anime-world-generator-thumb.jpg",
+    "alt": "Anime World Generator"
+  },
+  {
+    "id": "fantasy-portrait-generator",
+    "title": "Fantasy Portrait Generator",
+    "href": "/machine-learning-model/fantasy-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/874210abae8f4f2582c22f22afb4fa33/fantasy-portrait-generator-thumb.jpg",
+    "alt": "Fantasy Portrait Generator"
+  },
+  {
+    "id": "comics-portrait-generator",
+    "title": "Comics Portrait Generator",
+    "href": "/machine-learning-model/comics-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/da359d1f190046f38850cfaefa08796e/comics-portrait-generator-thumb.jpg",
+    "alt": "Comics Portrait Generator"
+  },
+  {
+    "id": "cyberpunk-portrait-generator",
+    "title": "Cyberpunk Portrait Generator",
+    "href": "/machine-learning-model/cyberpunk-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/5ab3b17559534476b114c038ec06837b/cyberpunk-portrait-generator-thumb.jpg",
+    "alt": "Cyberpunk Portrait Generator"
+  },
+  {
+    "id": "neo-noir-generator",
+    "title": "Neo Noir Generator",
+    "href": "/machine-learning-model/neo-noir-generator",
+    "image": "https://images.deepai.org/machine-learning-models/7d928e64c5a54caabfeca173ab4d4fb8/neo-noir-generator-thumb.jpg",
+    "alt": "Neo Noir Generator"
+  },
+  {
+    "id": "pixel-world-generator",
+    "title": "Pixel World Generator",
+    "href": "/machine-learning-model/pixel-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/6a34815f78ca4ae99935231bcc60f05b/pixel-world-generator-thumb.jpg",
+    "alt": "Pixel World Generator"
+  },
+  {
+    "id": "manga-panel-genarator",
+    "title": "Manga Panel Generator",
+    "href": "/machine-learning-model/manga-panel-genarator",
+    "image": "https://images.deepai.org/machine-learning-models/7b0801110389457892b877d149b0d843/manga-panel-genarator-thumb.jpg",
+    "alt": "Manga Panel Generator"
+  },
+  {
+    "id": "3d-cartoon-generator",
+    "title": "3D Cartoon Character Generator",
+    "href": "/machine-learning-model/3d-cartoon-generator",
+    "image": "https://images.deepai.org/machine-learning-models/0c1f5ac6dce3498cab4d61be88a6f4ca/3d-cartoon-generator-thumb.jpg",
+    "alt": "3D Cartoon Character Generator"
+  },
+  {
+    "id": "fantasy-map-generator",
+    "title": "Fantasy Map Generator",
+    "href": "/machine-learning-model/fantasy-map-generator",
+    "image": "https://images.deepai.org/machine-learning-models/5585ca7c0c5e492b9b23f8ce7f072d74/fantasy-map-generator-thumb.jpg",
+    "alt": "Fantasy Map Generator"
+  },
+  {
+    "id": "cyber-beast-generator",
+    "title": "Cyber Beast Generator",
+    "href": "/machine-learning-model/cyber-beast-generator",
+    "image": "https://images.deepai.org/machine-learning-models/c2f43944d4d44134a66fe38a79ff47ce/cyber-beast-generator-thumb.jpg",
+    "alt": "Cyber Beast Generator"
+  },
+  {
+    "id": "dystopian-landscape-generator",
+    "title": "Dystopian Landscape Generator",
+    "href": "/machine-learning-model/dystopian-landscape-generator",
+    "image": "https://images.deepai.org/machine-learning-models/efff2d47b658419c98a47187384ad32b/dystopian-landscape-generator-thumb.jpg",
+    "alt": "Dystopian Landscape Generator"
+  },
+  {
+    "id": "ocean-life-generator",
+    "title": "Ocean Life Generator",
+    "href": "/machine-learning-model/ocean-life-generator",
+    "image": "https://images.deepai.org/machine-learning-models/804760ae342c420b92735331b5102881/ocean-life-generator-thumb.jpg",
+    "alt": "Ocean Life Generator"
+  },
+  {
+    "id": "space-world-generator",
+    "title": "Space World Generator",
+    "href": "/machine-learning-model/space-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/36abf50ee64c4a6b95b016af3b0acf0f/space-world-generator-thumb.jpg",
+    "alt": "Space World Generator"
+  },
+  {
+    "id": "comics-superhero-generator",
+    "title": "Comics Superhero Generator",
+    "href": "/machine-learning-model/comics-superhero-generator",
+    "image": "https://images.deepai.org/machine-learning-models/620a1b90b02e4fa18295534f91d54bda/comics-superhero-generator-thumb.jpg",
+    "alt": "Comics Superhero Generator"
+  },
+  {
+    "id": "anime-superhero-generator",
+    "title": "Anime Superhero Generator",
+    "href": "/machine-learning-model/anime-superhero-generator",
+    "image": "https://images.deepai.org/machine-learning-models/8f06a3f311b246a5afac4a0ed71480c6/anime-superhero-generator-thumb.jpg",
+    "alt": "Anime Superhero Generator"
+  },
+  {
+    "id": "prophetic-vision-generator",
+    "title": "Prophetic Vision Generator",
+    "href": "/machine-learning-model/prophetic-vision-generator",
+    "image": "https://images.deepai.org/machine-learning-models/4f780b4304e2424b8039da88ce33f031/prophetic-vision-generator-thumb.jpg",
+    "alt": "Prophetic Vision Generator"
+  },
+  {
+    "id": "grotesque-art-generator",
+    "title": "Grotesque Art Generator",
+    "href": "/machine-learning-model/grotesque-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/b7a1d3463f6645678d62c41756edef4b/grotesque-art-generator-thumb.jpg",
+    "alt": "Grotesque Art Generator"
+  },
+  {
+    "id": "tribal-art-generator",
+    "title": "Tribal Art Generator",
+    "href": "/machine-learning-model/tribal-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/5a5c43dff05e40bfad51ea1ccb33a062/tribal-art-generator-thumb.jpg",
+    "alt": "Tribal Art Generator"
+  },
+  {
+    "id": "mysticism-art-generator",
+    "title": "Mysticism Art Generator",
+    "href": "/machine-learning-model/mysticism-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/8d536e9ddd8241258d6997c527a7a664/mysticism-art-generator-thumb.jpg",
+    "alt": "Mysticism Art Generator"
+  },
+  {
+    "id": "urban-fashion-generator",
+    "title": "Urban Fashion Generator",
+    "href": "/machine-learning-model/urban-fashion-generator",
+    "image": "https://images.deepai.org/machine-learning-models/d2afee263cfb4c3380b159ef7e818b3f/urban-fashion-generator-thumb.jpg",
+    "alt": "Urban Fashion Generator"
+  },
+  {
+    "id": "children-book-generator",
+    "title": "Children’s Book Illustration Generator",
+    "href": "/machine-learning-model/children-book-generator",
+    "image": "https://images.deepai.org/machine-learning-models/80a11f4024424928adf6e72ac023ae5b/children-book-generator-thumb.jpg",
+    "alt": "Children’s Book Illustration Generator"
+  },
+  {
+    "id": "minimalistic-art-generator",
+    "title": "Minimalistic Art Generator",
+    "href": "/machine-learning-model/minimalistic-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/b293ff2b59c84f15a5d4c7ab7e2170d1/minimalistic-art-generator-thumb.jpg",
+    "alt": "Minimalistic Art Generator"
+  },
+  {
+    "id": "art-deco-generator",
+    "title": "Art Deco Generator",
+    "href": "/machine-learning-model/art-deco-generator",
+    "image": "https://images.deepai.org/machine-learning-models/cce8545c8068424a961850eb40b11fbd/art-deco-generator-thumb.jpg",
+    "alt": "Art Deco Generator"
+  },
+  {
+    "id": "haunted-portrait-generator",
+    "title": "Haunted Portrait Generator",
+    "href": "/machine-learning-model/haunted-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/6f08301372434b098dcf23b71f7d7a46/haunted-portrait-generator-thumb.jpg",
+    "alt": "Haunted Portrait Generator"
+  },
+  {
+    "id": "steampunk-landscape-generator",
+    "title": "Steampunk Landscape Generator",
+    "href": "/machine-learning-model/steampunk-landscape-generator",
+    "image": "https://images.deepai.org/machine-learning-models/3f65f38bac1e43bdaba806f3e41a0ccb/steampunk-landscape-generator-thumb.jpg",
+    "alt": "Steampunk Landscape Generator"
+  },
+  {
+    "id": "art-nouveau-generator",
+    "title": "Art Nouveau Generator",
+    "href": "/machine-learning-model/art-nouveau-generator",
+    "image": "https://images.deepai.org/machine-learning-models/4590b6813ce84eeaaabbb793b112e853/art-nouveau-generator-thumb.jpg",
+    "alt": "Art Nouveau Generator"
+  },
+  {
+    "id": "baroque-art-generator",
+    "title": "Baroque Art Generator",
+    "href": "/machine-learning-model/baroque-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/89c0307cce94415aa57fc979a96d856b/baroque-art-generator-thumb.jpg",
+    "alt": "Baroque Art Generator"
+  },
+  {
+    "id": "gothic-art-generator",
+    "title": "Gothic Art Generator",
+    "href": "/machine-learning-model/gothic-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/bc00703259884ce6b5dcf35e468c8d24/gothic-art-generator-thumb.jpg",
+    "alt": "Gothic Art Generator"
+  },
+  {
+    "id": "cubist-art-generator",
+    "title": "Cubist Art Generator",
+    "href": "/machine-learning-model/cubist-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/cd307f0bc62045dfb880cd4316108ddc/cubist-art-generator-thumb.jpg",
+    "alt": "Cubist Art Generator"
+  },
+  {
+    "id": "romantic-art-generator",
+    "title": "Romantic Art Generator",
+    "href": "/machine-learning-model/romantic-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/fee82d8974814829acf7a96352a18c81/romantic-art-generator-thumb.jpg",
+    "alt": "Romantic Art Generator"
+  },
+  {
+    "id": "photorealistic-portrait-generator",
+    "title": "Photorealistic Portrait Generator",
+    "href": "/machine-learning-model/photorealistic-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/200566ea7f18476c8e1c419ae9cf60de/photorealistic-portrait-generator-thumb.jpg",
+    "alt": "Photorealistic Portrait Generator"
+  },
+  {
+    "id": "chibi-character-generator",
+    "title": "Chibi Character Generator",
+    "href": "/machine-learning-model/chibi-character-generator",
+    "image": "https://images.deepai.org/machine-learning-models/79f527fa4ba8404eab7aad2a923fcedf/chibi-character-generator-thumb.jpg",
+    "alt": "Chibi Character Generator"
+  },
+  {
+    "id": "dreamscape-generator",
+    "title": "Dreamscape Generator",
+    "href": "/machine-learning-model/dreamscape-generator",
+    "image": "https://images.deepai.org/machine-learning-models/ec1061d313df439f82d46b97596d387d/dreamscape-generator-thumb.jpg",
+    "alt": "Dreamscape Generator"
+  },
+  {
+    "id": "mecha-suit-generator",
+    "title": "Mecha Suit Generator",
+    "href": "/machine-learning-model/mecha-suit-generator",
+    "image": "https://images.deepai.org/machine-learning-models/07de4ae7f2e34b23b170d5fa14024357/mecha-suit-generator-thumb.jpg",
+    "alt": "Mecha Suit Generator"
+  },
+  {
+    "id": "abstract-expressionism-generator",
+    "title": "Abstract Expressionism Generator",
+    "href": "/machine-learning-model/abstract-expressionism-generator",
+    "image": "https://images.deepai.org/machine-learning-models/4a963daf12074b6680459de7d237607b/abstract-expressionism-generator-thumb.jpg",
+    "alt": "Abstract Expressionism Generator"
+  },
+  {
+    "id": "supernatural-character-generator",
+    "title": "Supernatural Character Generator",
+    "href": "/machine-learning-model/supernatural-character-generator",
+    "image": "https://images.deepai.org/machine-learning-models/32f1b10dd5bb4a26a016c35c9a620c71/supernatural-character-generator-thumb.jpg",
+    "alt": "Supernatural Character Generator"
+  },
+  {
+    "id": "gladiator-arena-generator",
+    "title": "Gladiator Arena Generator",
+    "href": "/machine-learning-model/gladiator-arena-generator",
+    "image": "https://images.deepai.org/machine-learning-models/84338d42cc234a77b62189d49f46bc8d/gladiator-arena-generator-thumb.jpg",
+    "alt": "Gladiator Arena Generator"
+  },
+  {
+    "id": "solar-system-generator",
+    "title": "Solar System Generator",
+    "href": "/machine-learning-model/solar-system-generator",
+    "image": "https://images.deepai.org/machine-learning-models/c2238eb0c3eb454eb597ee607b30e6a0/solar-system-generator-thumb.jpg",
+    "alt": "Solar System Generator"
+  },
+  {
+    "id": "alien-flora-generator",
+    "title": "Alien Flora Generator",
+    "href": "/machine-learning-model/alien-flora-generator",
+    "image": "https://images.deepai.org/machine-learning-models/72f93d8edc204db7b9c81f39b06af6fe/alien-flora-generator-thumb.jpg",
+    "alt": "Alien Flora Generator"
+  },
+  {
+    "id": "renaissance-fresco-generator",
+    "title": "Renaissance Fresco Generator",
+    "href": "/machine-learning-model/renaissance-fresco-generator",
+    "image": "https://images.deepai.org/machine-learning-models/389094d48dbe458892342e2abb21a86b/renaissance-fresco-generator-thumb.jpg",
+    "alt": "Renaissance Fresco Generator"
+  },
+  {
+    "id": "depths-sea-generator",
+    "title": "Depths of the Sea Generator",
+    "href": "/machine-learning-model/depths-sea-generator",
+    "image": "https://images.deepai.org/machine-learning-models/f01dc21e99f2451b836e19f3ee2e60eb/depths-sea-generator-thumb.jpg",
+    "alt": "Depths of the Sea Generator"
+  },
+  {
+    "id": "fairy-tale-art-generator",
+    "title": "Fairy Tale Art Generator",
+    "href": "/machine-learning-model/fairy-tale-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/8468ba7dd0fb40bb896396596a61f10a/fairy-tale-art-generator-thumb.jpg",
+    "alt": "Fairy Tale Art Generator"
+  },
+  {
+    "id": "mythic-creature-generator",
+    "title": "Mythic Creature Generator",
+    "href": "/machine-learning-model/mythic-creature-generator",
+    "image": "https://images.deepai.org/machine-learning-models/cde7b5e709e7420aa15d652d4e17155e/mythic-creature-generator-thumb.jpg",
+    "alt": "Mythic Creature Generator"
+  },
+  {
+    "id": "post-apocalyptic-generator",
+    "title": "Post-Apocalyptic Art Generator",
+    "href": "/machine-learning-model/post-apocalyptic-generator",
+    "image": "https://images.deepai.org/machine-learning-models/0e8fc646ff424280af8a66f9e2e3e2f5/post-apocalyptic-generator-thumb.jpg",
+    "alt": "Post-Apocalyptic Art Generator"
+  },
+  {
+    "id": "ancient-egyptian-generator",
+    "title": "Ancient Egyptian Art Generator",
+    "href": "/machine-learning-model/ancient-egyptian-generator",
+    "image": "https://images.deepai.org/machine-learning-models/667d052e4ab74d0a93fdcd0591f51153/ancient-egyptian-generator-thumb.jpg",
+    "alt": "Ancient Egyptian Art Generator"
+  },
+  {
+    "id": "urban-graffiti-generator",
+    "title": "Urban Graffiti Generator",
+    "href": "/machine-learning-model/urban-graffiti-generator",
+    "image": "https://images.deepai.org/machine-learning-models/30db7e1fa6254d618fd6bea4b721a03e/urban-graffiti-generator-thumb.jpg",
+    "alt": "Urban Graffiti Generator"
+  },
+  {
+    "id": "wild-west-generator",
+    "title": "Wild West Generator",
+    "href": "/machine-learning-model/wild-west-generator",
+    "image": "https://images.deepai.org/machine-learning-models/46d9454914be4d53b5dae1b3ff34f9d8/wild-west-generator-thumb.jpg",
+    "alt": "Wild West Generator"
+  },
+  {
+    "id": "old-masters-generator",
+    "title": "Old Masters Art generator",
+    "href": "/machine-learning-model/old-masters-generator",
+    "image": "https://images.deepai.org/machine-learning-models/e0ff66797a8a45c2ab1691f5a05ff734/old-masters-generator-thumb.jpg",
+    "alt": "Old Masters Art generator"
+  },
+  {
+    "id": "origami-paper-generator",
+    "title": "Origami Paper Art Generator",
+    "href": "/machine-learning-model/origami-paper-generator",
+    "image": "https://images.deepai.org/machine-learning-models/7b0cf7b4da9b4e039fb7418f123bc569/origami-paper-generator-thumb.jpg",
+    "alt": "Origami Paper Art Generator"
+  },
+  {
+    "id": "carnival-scene-generator",
+    "title": "Carnival Scene Generator",
+    "href": "/machine-learning-model/carnival-scene-generator",
+    "image": "https://images.deepai.org/machine-learning-models/7417805c0ca84c1d9231ec3094c4408b/carnival-scene-generator-thumb.jpg",
+    "alt": "Carnival Scene Generator"
+  },
+  {
+    "id": "retro-game-generator",
+    "title": "Retro Game Art Generator",
+    "href": "/machine-learning-model/retro-game-generator",
+    "image": "https://images.deepai.org/machine-learning-models/236780556434491bbf085fcfae6ed45d/retro-game-generator-thumb.jpg",
+    "alt": "Retro Game Art Generator"
+  },
+  {
+    "id": "action-figure-generator",
+    "title": "Action Figure Generator",
+    "href": "/machine-learning-model/action-figure-generator",
+    "image": "https://images.deepai.org/machine-learning-models/1420d6b546da49a198683356e852529f/action-figure-generator-thumb.jpg",
+    "alt": "Action Figure Generator"
+  },
+  {
+    "id": "greek-mythology-generator",
+    "title": "Greek Mythology Character Generator",
+    "href": "/machine-learning-model/greek-mythology-generator",
+    "image": "https://images.deepai.org/machine-learning-models/d6e945ca0f9741089813ecf993604ac8/greek-mythology-generator-thumb.jpg",
+    "alt": "Greek Mythology Character Generator"
+  },
+  {
+    "id": "underground-city-generator",
+    "title": "Underground Cityscape Generator",
+    "href": "/machine-learning-model/underground-city-generator",
+    "image": "https://images.deepai.org/machine-learning-models/5ddca3f4af52473fa8c52cc5d2bc1bc9/underground-city-generator-thumb.jpg",
+    "alt": "Underground Cityscape Generator"
+  },
+  {
+    "id": "film-poster-generator",
+    "title": "Vintage Film Poster Generator",
+    "href": "/machine-learning-model/film-poster-generator",
+    "image": "https://images.deepai.org/machine-learning-models/a6d60048061345c0b77a5677408186ed/film-poster-generator-thumb.jpg",
+    "alt": "Vintage Film Poster Generator"
+  },
+  {
+    "id": "spaceship-blueprint-generator",
+    "title": "Spaceship Blueprint Generator",
+    "href": "/machine-learning-model/spaceship-blueprint-generator",
+    "image": "https://images.deepai.org/machine-learning-models/1274b96969cb4eed9ddc33db5fcdd1e3/spaceship-blueprint-generator-thumb.jpg",
+    "alt": "Spaceship Blueprint Generator"
+  },
+  {
+    "id": "zombie-apocalypse-generator",
+    "title": "Zombie Apocalypse Scene Generator",
+    "href": "/machine-learning-model/zombie-apocalypse-generator",
+    "image": "https://images.deepai.org/machine-learning-models/a17a3aafa0b5463eb32bf8159d9d1645/zombie-apocalypse-generator-thumb.jpg",
+    "alt": "Zombie Apocalypse Scene Generator"
+  },
+  {
+    "id": "concrete-jungle-generator",
+    "title": "Concrete Jungle Generator",
+    "href": "/machine-learning-model/concrete-jungle-generator",
+    "image": "https://images.deepai.org/machine-learning-models/de3a6c27dfe143bea15573cd54f0303d/concrete-jungle-generator-thumb.jpg",
+    "alt": "Concrete Jungle Generator"
+  },
+  {
+    "id": "bioluminescent-life-generator",
+    "title": "Bioluminescent Life Generator",
+    "href": "/machine-learning-model/bioluminescent-life-generator",
+    "image": "https://images.deepai.org/machine-learning-models/f082ddad02b247ac9ad54f3ac6fe238e/bioluminescent-life-generator-thumb.jpg",
+    "alt": "Bioluminescent Life Generator"
+  },
+  {
+    "id": "ice-world-generator",
+    "title": "Ice World Generator",
+    "href": "/machine-learning-model/ice-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/0c72c5372a0d41369ca5ab20a7a88b75/ice-world-generator-thumb.jpg",
+    "alt": "Ice World Generator"
+  },
+  {
+    "id": "bauhaus-design-generator",
+    "title": "Bauhaus Design Generator",
+    "href": "/machine-learning-model/bauhaus-design-generator",
+    "image": "https://images.deepai.org/machine-learning-models/de4923a96564443c99597f71592a5b8c/bauhaus-design-generator-thumb.jpg",
+    "alt": "Bauhaus Design Generator"
+  },
+  {
+    "id": "intergalactic-battle-generator",
+    "title": "Intergalactic Battle Generator",
+    "href": "/machine-learning-model/intergalactic-battle-generator",
+    "image": "https://images.deepai.org/machine-learning-models/0701800c1c884f11992cb1db06a86e2c/intergalactic-battle-generator-thumb.jpg",
+    "alt": "Intergalactic Battle Generator"
+  },
+  {
+    "id": "atlantis-world-generator",
+    "title": "Atlantis World Generator",
+    "href": "/machine-learning-model/atlantis-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/f08231047aa745d2a04639c216400f0c/atlantis-world-generator-thumb.jpg",
+    "alt": "Atlantis World Generator"
+  },
+  {
+    "id": "samurai-art-generator",
+    "title": "Samurai Art Generator",
+    "href": "/machine-learning-model/samurai-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/125028c952f04578a05d27e02e6df8bb/samurai-art-generator-thumb.jpg",
+    "alt": "Samurai Art Generator"
+  },
+  {
+    "id": "ice-sculpture-generator",
+    "title": "Ice Art Sculpture Generator",
+    "href": "/machine-learning-model/ice-sculpture-generator",
+    "image": "https://images.deepai.org/machine-learning-models/698b6540aeaf40848cbca0e755cb5488/ice-sculpture-generator-thumb.jpg",
+    "alt": "Ice Art Sculpture Generator"
+  },
+  {
+    "id": "opera-costume-generator",
+    "title": "Opera Costume Generator",
+    "href": "/machine-learning-model/opera-costume-generator",
+    "image": "https://images.deepai.org/machine-learning-models/3a1fa5d959db465fa8ca4f5e7a62da94/opera-costume-generator-thumb.jpg",
+    "alt": "Opera Costume Generator"
+  },
+  {
+    "id": "ancient-hieroglyph-generator",
+    "title": "Ancient Hieroglyph Generator",
+    "href": "/machine-learning-model/ancient-hieroglyph-generator",
+    "image": "https://images.deepai.org/machine-learning-models/70aa7c7f429f473db216a95d233e25ea/ancient-hieroglyph-generator-thumb.jpg",
+    "alt": "Ancient Hieroglyph Generator"
+  },
+  {
+    "id": "solar-flare-generator",
+    "title": "Solar Flare Generator",
+    "href": "/machine-learning-model/solar-flare-generator",
+    "image": "https://images.deepai.org/machine-learning-models/d759aae1f01f498997163d52228e3b03/solar-flare-generator-thumb.jpg",
+    "alt": "Solar Flare Generator"
+  },
+  {
+    "id": "kawaii-emoji-generator",
+    "title": "Kawaii Emoji Generator",
+    "href": "/machine-learning-model/kawaii-emoji-generator",
+    "image": "https://images.deepai.org/machine-learning-models/f6b2cb8d8fe1458293bbd3b8b53d41bc/kawaii-emoji-generator-thumb.jpg",
+    "alt": "Kawaii Emoji Generator"
+  },
+  {
+    "id": "psychedelic-poster-generator",
+    "title": "Psychedelic Poster Generator",
+    "href": "/machine-learning-model/psychedelic-poster-generator",
+    "image": "https://images.deepai.org/machine-learning-models/267f86361b7d49ce976cd45cdae6c87c/psychedelic-poster-generator-thumb.jpg",
+    "alt": "Psychedelic Poster Generator"
+  },
+  {
+    "id": "witchcraft-symbol-generator",
+    "title": "Witchcraft Symbol Generator",
+    "href": "/machine-learning-model/witchcraft-symbol-generator",
+    "image": "https://images.deepai.org/machine-learning-models/57dc76013702447dadb798cfb9eb75b9/witchcraft-symbol-generator-thumb.jpg",
+    "alt": "Witchcraft Symbol Generator"
+  },
+  {
+    "id": "alien-civilization-generator",
+    "title": "Alien Civilization Generator",
+    "href": "/machine-learning-model/alien-civilization-generator",
+    "image": "https://images.deepai.org/machine-learning-models/82463421662f4e1abd96f20cdcb67ce5/alien-civilization-generator-thumb.jpg",
+    "alt": "Alien Civilization Generator"
+  },
+  {
+    "id": "cave-painting-generator",
+    "title": "Cave Painting Generator",
+    "href": "/machine-learning-model/cave-painting-generator",
+    "image": "https://images.deepai.org/machine-learning-models/ad74707109514733bffe89101ceed784/cave-painting-generator-thumb.jpg",
+    "alt": "Cave Painting Generator"
+  },
+  {
+    "id": "mechanical-anatomy-generator",
+    "title": "Mechanical Anatomy Generator",
+    "href": "/machine-learning-model/mechanical-anatomy-generator",
+    "image": "https://images.deepai.org/machine-learning-models/4b4a9edcbcf44af1be742fc388105050/mechanical-anatomy-generator-thumb.jpg",
+    "alt": "Mechanical Anatomy Generator"
+  },
+  {
+    "id": "surrealist-sculpture-generator",
+    "title": "Surrealist Sculpture Generator",
+    "href": "/machine-learning-model/surrealist-sculpture-generator",
+    "image": "https://images.deepai.org/machine-learning-models/3e078f841daf4591aeb7556dfb520988/surrealist-sculpture-generator-thumb.jpg",
+    "alt": "Surrealist Sculpture Generator"
+  },
+  {
+    "id": "stained-glass-generator",
+    "title": "Stained Glass Window Generator",
+    "href": "/machine-learning-model/stained-glass-generator",
+    "image": "https://images.deepai.org/machine-learning-models/f080b6f54f4f47f88bb024e82093fc24/stained-glass-generator-thumb.jpg",
+    "alt": "Stained Glass Window Generator"
+  },
+  {
+    "id": "gothic-literature-generator",
+    "title": "Gothic Literature Art Generator",
+    "href": "/machine-learning-model/gothic-literature-generator",
+    "image": "https://images.deepai.org/machine-learning-models/ec22244cfcdc46a6b1406fdd7b892782/gothic-literature-generator-thumb.jpg",
+    "alt": "Gothic Literature Art Generator"
+  },
+  {
+    "id": "colonial-portrait-generator",
+    "title": "Colonial Portrait Generator",
+    "href": "/machine-learning-model/colonial-portrait-generator",
+    "image": "https://images.deepai.org/machine-learning-models/a16a1162e4de47c9aaa21e05a23275ab/colonial-portrait-generator-thumb.jpg",
+    "alt": "Colonial Portrait Generator"
+  },
+  {
+    "id": "unreal-cityscape-generator",
+    "title": "Unreal Cityscape Generator",
+    "href": "/machine-learning-model/unreal-cityscape-generator",
+    "image": "https://images.deepai.org/machine-learning-models/23de052a287648e391b7f8b69ead2ea4/unreal-cityscape-generator-thumb.jpg",
+    "alt": "Unreal Cityscape Generator"
+  },
+  {
+    "id": "clockwork-toy-generator",
+    "title": "Clockwork Toy Generator",
+    "href": "/machine-learning-model/clockwork-toy-generator",
+    "image": "https://images.deepai.org/machine-learning-models/7c3871be0531403c841dad7dc49a3456/clockwork-toy-generator-thumb.jpg",
+    "alt": "Clockwork Toy Generator"
+  },
+  {
+    "id": "marionette-design-generator",
+    "title": "Marionette Design Generator",
+    "href": "/machine-learning-model/marionette-design-generator",
+    "image": "https://images.deepai.org/machine-learning-models/24c2fabdfe344a4c98b722cb5c121995/marionette-design-generator-thumb.jpg",
+    "alt": "Marionette Design Generator"
+  },
+  {
+    "id": "post-impressionist-painting-generator",
+    "title": "Post-Impressionist Painting Generator",
+    "href": "/machine-learning-model/post-impressionist-painting-generator",
+    "image": "https://images.deepai.org/machine-learning-models/10b3a1d3362148b4b0122f69f7eb702b/post-impressionist-painting-generator-t.jpg",
+    "alt": "Post-Impressionist Painting Generator"
+  },
+  {
+    "id": "tropical-paradise-generator",
+    "title": "Tropical Paradise Generator",
+    "href": "/machine-learning-model/tropical-paradise-generator",
+    "image": "https://images.deepai.org/machine-learning-models/1a9e75ba293146f7879183528e27bfdb/tropical-paradise-generator-thumb.jpg",
+    "alt": "Tropical Paradise Generator"
+  },
+  {
+    "id": "elven-world-generator",
+    "title": "Elven World Generator",
+    "href": "/machine-learning-model/elven-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/b8e72ae53ba64c3ab0c3fd3b9122d18b/elven-world-generator-thumb.jpg",
+    "alt": "Elven World Generator"
+  },
+  {
+    "id": "zentangle-design-generator",
+    "title": "Zentangle Design Generator",
+    "href": "/machine-learning-model/zentangle-design-generator",
+    "image": "https://images.deepai.org/machine-learning-models/228327a4313e4c07ac659bfaf674a22e/zentangle-design-generator-thumb.jpg",
+    "alt": "Zentangle Design Generator"
+  },
+  {
+    "id": "mars-life-generator",
+    "title": "Mars Life Generator",
+    "href": "/machine-learning-model/mars-life-generator",
+    "image": "https://images.deepai.org/machine-learning-models/acc2843a7d5e47ff82f8b8a006b0d8fa/mars-life-generator-thumb.jpg",
+    "alt": "Mars Life Generator"
+  },
+  {
+    "id": "brutalist-architecture-generator",
+    "title": "Brutalist Architecture Generator",
+    "href": "/machine-learning-model/brutalist-architecture-generator",
+    "image": "https://images.deepai.org/machine-learning-models/29e68f30b7674746a3a203fb82e7e7dc/brutalist-architecture-generator-thumb.jpg",
+    "alt": "Brutalist Architecture Generator"
+  },
+  {
+    "id": "political-satire-generator",
+    "title": "Political Satire Cartoon Generator",
+    "href": "/machine-learning-model/political-satire-generator",
+    "image": "https://images.deepai.org/machine-learning-models/1cfd26dd622e42aba12d77bc4c984ca0/political-satire-generator-thumb.jpg",
+    "alt": "Political Satire Cartoon Generator"
+  },
+  {
+    "id": "treehouse-design-generator",
+    "title": "Treehouse Design Generator",
+    "href": "/machine-learning-model/treehouse-design-generator",
+    "image": "https://images.deepai.org/machine-learning-models/cbb3ebec78584ec59dded0d079d12d19/treehouse-design-generator-thumb.jpg",
+    "alt": "Treehouse Design Generator"
+  },
+  {
+    "id": "ancient-mayan-art-generator",
+    "title": "Ancient Mayan Art Generator",
+    "href": "/machine-learning-model/ancient-mayan-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/87e3a91f41484af9ac55fcb594794667/ancient-mayan-art-generator-thumb.jpg",
+    "alt": "Ancient Mayan Art Generator"
+  },
+  {
+    "id": "decoupage-art-generator",
+    "title": "Decoupage Art Generator",
+    "href": "/machine-learning-model/decoupage-art-generator",
+    "image": "https://images.deepai.org/machine-learning-models/6a72d3dc8a1040fa8996d8014e79aab5/decoupage-art-generator-thumb.jpg",
+    "alt": "Decoupage Art Generator"
+  },
+  {
+    "id": "terrarium-world-generator",
+    "title": "Terrarium World Generator",
+    "href": "/machine-learning-model/terrarium-world-generator",
+    "image": "https://images.deepai.org/machine-learning-models/22e6cf56e980455b830afc224abfc969/terrarium-world-generator-thumb.jpg",
+    "alt": "Terrarium World Generator"
+  },
+  {
+    "id": "dystopian-cyberpunk-generator",
+    "title": "Dystopian Cyberpunk Generator",
+    "href": "/machine-learning-model/dystopian-cyberpunk-generator",
+    "image": "https://images.deepai.org/machine-learning-models/96076d5348474c099c3f43f26450d17c/dystopian-cyberpunk-generator-thumb.jpg",
+    "alt": "Dystopian Cyberpunk Generator"
+  },
+  {
+    "id": "film-collage-generator",
+    "title": "Film Photo Collage Generator",
+    "href": "/machine-learning-model/film-collage-generator",
+    "image": "https://images.deepai.org/machine-learning-models/6efa9fac5c2748d0ab37ff150c1288df/film-collage-generator-thumb.jpg",
+    "alt": "Film Photo Collage Generator"
+  },
+  {
+    "id": "zodiac-design-generator",
+    "title": "Zodiac Design Generator",
+    "href": "/machine-learning-model/zodiac-design-generator",
+    "image": "https://images.deepai.org/machine-learning-models/ed03bbc6d4e64bb1bd0f8e07d7dea26a/zodiac-design-generator-thumb.jpg",
+    "alt": "Zodiac Design Generator"
+  },
+  {
+    "id": "robot-battle-generator",
+    "title": "Giant Robot Battle Generator",
+    "href": "/machine-learning-model/robot-battle-generator",
+    "image": "https://images.deepai.org/machine-learning-models/04e9466d72f64d04a33fd59e5c041d6f/robot-battle-generator-thumb.jpg",
+    "alt": "Giant Robot Battle Generator"
+  },
+  {
+    "id": "playing-card-generator",
+    "title": "Vintage Playing Card Generator",
+    "href": "/machine-learning-model/playing-card-generator",
+    "image": "https://images.deepai.org/machine-learning-models/7f5473b239374d6bb8058335f2150b46/playing-card-generator-thumb.jpg",
+    "alt": "Vintage Playing Card Generator"
+  },
+  {
+    "id": "gothic-architecture-generator",
+    "title": "Gothic Architecture Generator",
+    "href": "/machine-learning-model/gothic-architecture-generator",
+    "image": "https://images.deepai.org/machine-learning-models/49e37d479eaa4ecf81af9a9f712f448f/gothic-architecture-generator-thumb.jpg",
+    "alt": "Gothic Architecture Generator"
+  }
+]

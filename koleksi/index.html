@@ -1,0 +1,110 @@
+---
+layout: default
+title: Koleksi Cerita
+permalink: /koleksi
+---
+
+<style>
+.highlight {
+  background-color: #fde68a;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+</style>
+
+<div class="max-w-2xl mx-auto py-10 px-4">
+  <div id="cerita-box" class="bg-white shadow-md rounded p-6">
+    <h2 class="text-2xl font-bold mb-4 text-purple-800" id="judul-tema">📚 Memuat cerita...</h2>
+  <button id="btn-audio" class="text-white bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded shadow">
+    🔊 Dengarkan Cerita
+  </button>
+    <div class="text-gray-700 whitespace-pre-line prose prose-lg max-w-none leading-relaxed" id="isi-cerita"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", async () => {
+  const path = window.location.pathname;
+  const uid = path.split('/').filter(Boolean).pop();
+
+  const judul = document.getElementById('judul-tema');
+  const isi = document.getElementById('isi-cerita');
+  const btnAudio = document.getElementById('btn-audio');
+
+  let currentUtterance = null;
+  let spans = [];
+
+  if (!uid || !uid.startsWith('anon-')) {
+    judul.textContent = "Cerita tidak ditemukan";
+    isi.textContent = "Halaman ini hanya dapat menampilkan cerita dari UID yang valid.";
+    btnAudio.disabled = true;
+    return;
+  }
+
+  try {
+    const res = await fetch(`https://wondertales.mvstream.workers.dev/cerita-anon?uid=${uid}`);
+    const data = await res.json();
+
+    if (data.error) throw new Error(data.error);
+
+    judul.textContent = `📖 ${data.tema}`;
+
+    // 🔠 Pecah cerita jadi kata & bungkus pakai <span>
+    const words = data.cerita.split(/\s+/);
+    isi.innerHTML = words.map((word, i) => `<span data-word="${i}">${word}</span>`).join(' ');
+    spans = Array.from(isi.querySelectorAll('span[data-word]'));
+
+    btnAudio.addEventListener("click", () => {
+      if (!window.speechSynthesis) {
+        alert("Browser kamu tidak mendukung text-to-speech.");
+        return;
+      }
+
+      if (speechSynthesis.speaking) {
+        speechSynthesis.cancel();
+        btnAudio.textContent = "🔊 Dengarkan Cerita";
+        spans.forEach(span => span.classList.remove("highlight"));
+        return;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(data.cerita);
+      utterance.lang = "id-ID";
+      utterance.rate = 0.95;
+      utterance.pitch = 1;
+
+      utterance.onboundary = (event) => {
+        if (event.name !== "word") return;
+
+        const index = event.charIndex;
+        let total = 0;
+
+        for (let i = 0; i < spans.length; i++) {
+          const span = spans[i];
+          const wordLen = span.textContent.length + 1; // +1 for space
+          if (total + wordLen >= index) {
+            spans.forEach(s => s.classList.remove("highlight"));
+            span.classList.add("highlight");
+            span.scrollIntoView({ behavior: "smooth", block: "center" });
+            break;
+          }
+          total += wordLen;
+        }
+      };
+
+      utterance.onend = () => {
+        btnAudio.textContent = "🔊 Dengarkan Cerita";
+        spans.forEach(span => span.classList.remove("highlight"));
+      };
+
+      speechSynthesis.speak(utterance);
+      btnAudio.textContent = "⏹️ Hentikan Audio";
+      currentUtterance = utterance;
+    });
+
+  } catch (err) {
+    judul.textContent = "Gagal memuat cerita";
+    isi.textContent = err.message;
+    btnAudio.disabled = true;
+  }
+});
+</script>

@@ -1,0 +1,80 @@
+---
+layout: default
+title: Profil Pengguna
+permalink: /user-profile
+---
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<div class="max-w-xl mx-auto p-6" x-data="userProfilePage()" x-init="init()">
+
+  <template x-if="loading">
+    <p class="text-center text-gray-500">⏳ Memuat profil...</p>
+  </template>
+
+  <template x-if="!loading && !user">
+    <div class="text-center">
+      <p class="mb-4 text-lg">Silakan login untuk melihat profil Anda.</p>
+      <button @click="loginGoogle" class="bg-red-500 text-white px-4 py-2 rounded shadow">
+        🔐 Login dengan Google
+      </button>
+    </div>
+  </template>
+
+  <template x-if="!loading && user">
+    <div class="bg-white/70 backdrop-blur border border-purple-100 rounded-xl shadow-lg p-6 relative">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-purple-700"><i class="fa-solid fa-user-circle mr-2"></i>Profil Pengguna</h2>
+        <button @click="logout" class="text-sm text-gray-600 hover:text-red-600">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+        </button>
+      </div>
+
+      <div class="space-y-3 text-gray-700">
+        <div class="flex items-center">
+          <i class="fa-solid fa-id-badge w-6 text-purple-500 mr-2"></i>
+          <span class="font-semibold mr-1">Nama:</span>
+          <span x-text="user.displayName"></span>
+        </div>
+
+        <div class="flex items-center">
+          <i class="fa-solid fa-envelope w-6 text-purple-500 mr-2"></i>
+          <span class="font-semibold mr-1">Email:</span>
+          <span x-text="user.email"></span>
+        </div>
+
+        <div class="flex items-center">
+          <i class="fa-solid fa-calendar-check w-6 text-purple-500 mr-2"></i>
+          <span class="font-semibold mr-1">Bergabung:</span>
+          <span x-text="new Date(user.metadata.creationTime).toLocaleDateString('id-ID')"></span>
+        </div>
+
+        <div class="flex items-center">
+          <i class="fa-solid fa-layer-group w-6 text-purple-500 mr-2"></i>
+          <span class="font-semibold mr-1">Status Tier:</span>
+          <span x-text="user.tier || '—'"></span>
+        </div>
+
+        <div class="flex items-center">
+          <i class="fa-solid fa-clock w-6 text-purple-500 mr-2"></i>
+          <span class="font-semibold mr-1">Aktif hingga:</span>
+          <span x-text="user.premiumUntil ? user.premiumUntil.toLocaleDateString('id-ID') : '—'"></span>
+        </div>
+
+        <div class="flex items-center">
+          <i class="fa-solid fa-key w-6 text-purple-500 mr-2"></i>
+          <span class="font-semibold mr-1">ID Pelanggan:</span>
+          <span class="text-xs text-gray-500" x-text="user.uid"></span>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <a href="/langganan" class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full shadow">
+          🚀 Perpanjang Paket
+        </a>
+      </div>
+    </div>
+  </template>
+
+</div>

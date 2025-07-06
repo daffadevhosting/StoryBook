@@ -1,0 +1,62 @@
+---
+layout: default
+title: Pilih Langganan
+permalink: /langganan
+---
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div class="max-w-4xl mx-auto p-6" x-data="langgananPage()" x-init="init()">
+
+  <template x-if="!user">
+    <div class="text-center">
+      <p class="mb-4 text-lg">Silakan login untuk melanjutkan.</p>
+      <button @click="loginGoogle" class="bg-red-500 text-white px-4 py-2 rounded shadow">
+        🔐 Login dengan Google
+      </button>
+    </div>
+  </template>
+
+  <template x-if="user">
+    <div>
+      <h2 class="text-2xl font-bold mb-6 text-center">🪄 Pilih Paket Langganan</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <template x-for="(info, key) in paketList" :key="key">
+          <div class="border p-6 rounded-xl shadow hover:shadow-lg transition bg-gradient-to-br from-purple-50 to-white">
+            <div class="flex items-center space-x-4 mb-4">
+              <!-- Icon FontAwesome -->
+              <i class="text-4xl text-purple-600"
+                 :class="{
+                  'fa-solid fa-mug-hot': key === 'supporter',
+                  'fa-solid fa-star': key === 'subscriber',
+                  'fa-solid fa-gem': key === 'premium',
+                  'fa-solid fa-users': key === 'keluarga'
+                 }"></i>
+              <div>
+                <h3 class="text-xl font-semibold capitalize text-purple-800" x-text="key"></h3>
+                <p class="text-sm text-gray-600" x-text="`${info.quota} cerita per hari`"></p>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <span class="inline-block bg-yellow-100 text-yellow-800 text-sm px-3 py-1 rounded-full mr-2">
+                💰 <span x-text="info.price.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' })"></span>
+              </span>
+              <span class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">
+                ⏳ <span x-text="`${info.days} Hari`"></span>
+              </span>
+            </div>
+
+            <button @click="langganan(key)" class="w-full bg-purple-600 text-white py-2 rounded-lg mt-2 hover:bg-purple-700 transition">
+              Langganan Sekarang
+            </button>
+          </div>
+        </template>
+
+      </div>
+    </div>
+  </template>
+
+</div>
